@@ -94,8 +94,8 @@ def main():
     learning_rate = 0.001
     batch_size = 8
 
-    dataset = Mydataset('/home/nam/exp/image')
-    dataset_test = Mydataset('/home/nam/exp/image')
+    dataset = Mydataset('/home/nam/workspace/WorkStageRecognition/image')
+    dataset_test = Mydataset('/home/nam/workspace/WorkStageRecognition/image')
 
     # split the dataset in train and test set
     indices = torch.randperm(len(dataset)).tolist()
@@ -140,6 +140,7 @@ def main():
             # print(data, target)
 
             output = model(data) 
+            print(target)
 
             loss = criterion(output, target)
 

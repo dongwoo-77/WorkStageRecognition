@@ -73,7 +73,7 @@ try:
         tm = time.strftime('%Y-%m-%d %I:%M:%S %p', tm)
         # print("time :", 1/(time.time() - start))
 
-        cv2.imwrite('images/1/{}.png'.format(i), color_image)
+        cv2.imwrite('images/test/7/{}.png'.format(i), color_image)
 
         # Show images
         cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
@@ -81,7 +81,7 @@ try:
         cv2.waitKey(1)
         
         i = i+1
-        if i%500 == 0:
+        if i%100 == 0:
             input('press enter, {}'.format(i))
         
 finally:
